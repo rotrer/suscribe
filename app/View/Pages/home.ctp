@@ -1,3 +1,9 @@
+    <?php 
+        if ( isset($error_msg) && !empty($error_msg) ) {
+            echo $error_msg; 
+            die();
+        }
+    ?>
     <section id="intro">
         <div class="container">
             <div class="row">

@@ -14,7 +14,8 @@
                                                 'id' => 'msform'
                                             ));
                     ?>
-                    <?php echo $this->Form->input('type', array("type" => "hidden", "value" => $type)); ?>
+                    <?php echo $this->Form->input('who', array("type" => "hidden", "value" => $type)); ?>
+                    <?php echo $this->Form->input('paytype', array("type" => "hidden", "value" => "")); ?>
                         <ul id="progressbar">
                             <li class="active">Paso 1</li>
                             <li>Paso 2</li>
@@ -27,12 +28,12 @@
                                 <div class="six columns">
                                     <label>Nombre</label>
                                     <!-- <input class="u-full-width" type="text"> -->
-                                    <?php echo $this->Form->input('nombre', array("class" => "u-full-width")); ?>
+                                    <?php echo $this->Form->input('first_name', array("class" => "u-full-width")); ?>
                                 </div>
                                 <div class="six columns">
                                     <label>Apellidos</label>
                                     <!-- <input class="u-full-width" type="text"> -->
-                                    <?php echo $this->Form->input('apellidos', array("class" => "u-full-width")); ?>
+                                    <?php echo $this->Form->input('last_name', array("class" => "u-full-width")); ?>
                                 </div>
                             </div>
                             <div class="row">
@@ -103,16 +104,17 @@
                         </fieldset>
                         <fieldset>
                             <h3>Paso 3 · Datos de tu vehículo</h3>
-                            <div class="row">
-                                <div class="six columns">
-                                    <?php
-                                        echo $this->Form->input('comuna_id', array('options' => array( 1 => 'Patente'), 'empty' => 'Selecciona', 'class' => 'u-full-width'));
-                                    ?>
-                                </div>
-                                <div class="six columns">
-                                    <?php echo $this->Form->input('mobile', array("placeholder" => "(EJ. ABCD12-0)", "class" => "u-full-width")); ?>
-                                </div>
+                            <div class="base_car">
+                                <div class="row">
+                                    <div class="six columns">
+                                        <?php echo $this->Form->input(null, array('options' => array( 1 => 'Patente'), 'empty' => 'Selecciona', 'class' => 'u-full-width car_doc', 'name' => 'data[Usuario][car][]')); ?>
+                                    </div>
+                                    <div class="six columns">
+                                        <?php echo $this->Form->input(null, array("placeholder" => "(EJ. ABCD12-0)", "class" => "u-full-width car_id", 'name'=> 'data[Usuario][car_value][]')); ?>
+                                    </div>
+                                </div>    
                             </div>
+                            
                             <div class="newOne">
                                 <!-- nueva file -->
                             </div>
@@ -124,17 +126,16 @@
                             <input type="button" name="next" class="next action-button step3" value="Siguiente paso" />
                         </fieldset>
                         <fieldset>
-                            <?php echo $this->Form->input('paytype', array("type" => "hidden", "value" => "")); ?>
                             <h3>Paso 4 · Formas de pago</h3>
                             <section class="tablas">
-                                <section class="tabla-1 three columns lift plan-tier" id="addPAC">
+                                <section class="tabla-1 three columns lift plan-tier state-selected" id="addPAC">
                                   <div class="inner-table">
                                     <h4 class="color-1">PAC</h4>
                                     <p>Pago Automático con Cargo a Cuenta Bancaria</p>
                                     <a class="button boton-gris" href="#">Seleccionar</a>
                                   </div>
                                 </section>
-                                <section class="six columns lift plan-tier callout" id="addSER">
+                                <section class="six columns lift plan-tier callout state-selected" id="addSER">
                                     <h6>RECOMENDADO</h6>
                                     <div class="inner-table">
                                       <h4>SERVIPAG</h4>
@@ -144,7 +145,7 @@
                                       <p>Una vez completado correctamente el registro online</p>
                                     </div>
                                 </section>
-                                <section class="tabla-3 three columns column lift plan-tier" id="addPAT">
+                                <section class="tabla-3 three columns column lift plan-tier state-selected" id="addPAT">
                                   <div class="inner-table">
                                     <h4 class="color-1">PAT</h4>
                                     <p>Pago Automático con Cargo a Tarjeta de Crédito</p>
@@ -157,7 +158,7 @@
                             <div class="row">
                                 <div class="six columns offset-by-three">
                                     <label>
-                                        <?php echo $this->Form->input('agree', array("type" => "checkbox")); ?>
+                                        <?php echo $this->Form->input('agree', array("type" => "checkbox", "value" => 1)); ?>
                                         <span class="label-body">Acepto el envío de facturas por email</span>
                                     </label>
                                 </div>
@@ -165,7 +166,7 @@
 
                             <input type="button" name="previous" class="previous action-button transparent" value="Paso anterior" />
 
-                            <a href="#popup" class="button boton-amarillo open-popup-link">Aceptar</a>
+                            <a href="" id="selectPay" class="button boton-amarillo">Aceptar</a>
 
                             <div id="popup" class="mfp-hide">
                               <div class="popup-content">
@@ -174,7 +175,7 @@
                                         <div class="eight columns offset-by-two modal-head text-center">
                                             <h3>Condiciones generales y operativas de uso sistema electrónico de cobro de tarifas o peajes</h3>
                                             <p>Descarga las condiciones generales <a href="#">aquí</a></p>
-                                            <a href="bienvenido.html" class="button boton-amarillo">He leído y acepto las condiciones</a>
+                                            <a href="" id="lastStep" class="button boton-amarillo">He leído y acepto las condiciones</a>
                                         </div>
                                         <div class="modal-body twelve columns">
                                             <p>ARTICULO PRIMERO: INTRODUCCIÓN.</p>

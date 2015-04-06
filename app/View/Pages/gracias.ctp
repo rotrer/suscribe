@@ -11,13 +11,29 @@
                         <p class="text-center">Recomienda a un amigo para que al igual que tu gane tiempo en sus viajes.</p>
                         <div class="row">
                             <div class="twelve columns">
-                                <form>
-                                    <div class="eight columns"><input class="u-full-width" type="email" placeholder="Ingresa el mail de un amigo" id="exampleEmailInput"></div>
+                                <?php 
+                                echo $this->Form->create(null, array(
+                                                            'url' => array('controller' => 'pages', 'action' => 'gracias'),
+                                                            'inputDefaults' => array(
+                                                                                'label' => false,
+                                                                                'div' => false
+                                                                            ),
+                                                            'id' => 'mailform'
+                                                        ));
+                                ?>
+                                    <div class="eight columns">
+                                        <div class="base_email">
+                                            <?php echo $this->Form->input('mail', array("type" => "email", "class" => "u-full-width mails_friends", "placeholder" => "Ingresa el mail de un amigo")); ?>
+                                        </div>
+                                        <div class="newOne">
+                                            <!-- nueva file -->
+                                        </div>
+                                    </div>
                                     <div class="four columns"><input class="u-full-width button-primary" type="submit" value="Enviar"></div>
-                                </form>
+                                <?php echo $this->Form->end(); ?>
 
                                 <div class="twelve columns">
-                                    <a class="link-form" href="#"><i class="fa fa-plus-circle"></i> INGRESAR MÁS CORREOS</a>
+                                    <a class="link-form" href="#" id="addEmailFriend"><i class="fa fa-plus-circle"></i> INGRESAR MÁS CORREOS</a>
                                 </div>
 
                                 <div class="twelve columns text-center">

@@ -24,11 +24,14 @@
 		<?php echo $this->Html->script('jquery.easing.min'); ?>
 		<?php echo $this->Html->script('scripts'); ?>
 		<script type="text/javascript">
-			var comunas = JSON.parse('<?php echo json_encode($comunasArr, JSON_HEX_QUOT | JSON_HEX_APOS ); ?>');
+			<?php if ( isset($comunasArr) && !empty($comunasArr) ) { ?>
+			var comunas = JSON.parse('<?php echo json_encode( $comunasArr, JSON_HEX_QUOT | JSON_HEX_APOS ); ?>');
+			<?php } ?>
 		</script>
 </head>
 
 <body>
+	<?php echo $this->Session->flash(); ?>
 	<header>
 			<div class="container">
 					<div class="row">
@@ -58,7 +61,6 @@
 					</div>
 			</div>
 	</header>
-	<?php echo $this->Session->flash(); ?>
 	<?php echo $this->fetch('content'); ?>
 	<footer>
         <div class="container">
