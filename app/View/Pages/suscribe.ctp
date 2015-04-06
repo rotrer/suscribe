@@ -1,4 +1,3 @@
-    <div class="error-form" style="position: fixed; left: 0px; right: 0px; margin: 0px auto; padding: 20px; color: rgb(255, 255, 255); max-width: 500px; top: 40%; background: red;z-index: 9999; display:none; text-align: center;"></div>
     <section id="tab-section">
         <div class="container">
             <div class="row">
@@ -14,7 +13,6 @@
                                                 'id' => 'msform'
                                             ));
                     ?>
-                    <?php echo $this->Form->input('type', array("type" => "hidden", "value" => $type)); ?>
                         <ul id="progressbar">
                             <li class="active">Paso 1</li>
                             <li>Paso 2</li>
@@ -26,118 +24,115 @@
                             <div class="row">
                                 <div class="six columns">
                                     <label>Nombre</label>
-                                    <!-- <input class="u-full-width" type="text"> -->
                                     <?php echo $this->Form->input('nombre', array("class" => "u-full-width")); ?>
                                 </div>
                                 <div class="six columns">
                                     <label>Apellidos</label>
-                                    <!-- <input class="u-full-width" type="text"> -->
                                     <?php echo $this->Form->input('apellidos', array("class" => "u-full-width")); ?>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="one-third column">
                                     <label>RUT</label>
-                                    <!-- <input class="u-full-width" type="text"> -->
                                     <?php echo $this->Form->input('rut', array("class" => "u-full-width")); ?>
                                 </div>
                                 <div class="one-third column">
                                     <label>Contraseña</label>
-                                    <!-- <input class="u-full-width" type="password"> -->
                                     <?php echo $this->Form->input('p4ss', array("type" => "password", "class" => "u-full-width")); ?>
                                 </div>
                                 <div class="one-third column">
                                     <label>Repetir Contraseña</label>
-                                    <!-- <input class="u-full-width" type="password"> -->
                                     <?php echo $this->Form->input('p4ss2', array("type" => "password", "class" => "u-full-width")); ?>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button boton-amarillo step1" value="Siguiente paso" />
+                            <input type="button" name="next" class="next action-button boton-amarillo" value="Siguiente paso" />
                         </fieldset>
                         <fieldset>
                             <h3>Paso 2 · Datos contacto</h3>
                             <div class="row">
                                 <div class="six columns">
                                     <label>Dirección</label>
-                                    <?php echo $this->Form->input('address', array("class" => "u-full-width")); ?>
+                                    <input class="u-full-width" type="text">
                                 </div>
                                 <div class="six columns">
                                     <label>Mail</label>
-                                    <?php echo $this->Form->input('mail', array("type" => "email", "class" => "u-full-width")); ?>
+                                    <input class="u-full-width" type="email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="six columns">
                                     <label>Región</label>
-                                    <?php
-                                        echo $this->Form->input('region_id', array('options' => $regionesR, 'empty' => 'Selecciona',    'class' => 'u-full-width'));
-                                    ?>
+                                    <?php echo $this->Form->input('p4ss2', array("type" => "password", "class" => "u-full-width")); ?>
+                                    <select class="u-full-width" id="exampleRecipientInput">
+                                        <option value="Opcion 1">Opción 1</option>
+                                        <option value="Opcion 2">Opción 2</option>
+                                        <option value="Opcion 3">Opción 3</option>
+                                        <option value="Opcion 4">Opción etc...</option>
+                                    </select>
                                 </div>
                                 <div class="six columns">
                                     <label>Confirma tu mail</label>
-                                    <?php echo $this->Form->input('mailr', array("type" => "email", "class" => "u-full-width")); ?>
+                                    <input class="u-full-width" type="email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="four columns">
                                     <label>Comuna</label>
-                                    <?php
-                                        echo $this->Form->input('comuna_id', array('empty' => 'Selecciona', 'class' => 'u-full-width'));
-                                    ?>
+                                    <select class="u-full-width" id="exampleRecipientInput">
+                                        <option value="Opcion 1">Opción 1</option>
+                                        <option value="Opcion 2">Opción 2</option>
+                                        <option value="Opcion 3">Opción 3</option>
+                                        <option value="Opcion 4">Opción etc...</option>
+                                    </select>
                                 </div>
                                 <div class="two columns">
                                     <label>Cod.</label>
-                                    <?php echo $this->Form->input('cod', array("class" => "u-full-width")); ?>
+                                    <input class="u-full-width" type="text">
                                 </div>
                                 <div class="three columns">
                                     <label>Fono</label>
-                                    <?php echo $this->Form->input('phone', array("type" => "tel", "class" => "u-full-width")); ?>
+                                    <input class="u-full-width" type="tel">
                                 </div>
                                 <div class="three columns">
                                     <label>Teléfono móvil</label>
-                                    <?php echo $this->Form->input('mobile', array("type" => "tel", "class" => "u-full-width")); ?>
+                                    <input class="u-full-width" type="tel">
                                 </div>
                             </div>
                             <input type="button" name="previous" class="previous action-button transparent" value="Paso anterior" />
-                            <input type="button" name="next" class="next action-button step2" value="Siguiente paso" />
+                            <input type="button" name="next" class="next action-button" value="Siguiente paso" />
                         </fieldset>
                         <fieldset>
                             <h3>Paso 3 · Datos de tu vehículo</h3>
-                            <div class="base_car">
-                                <div class="row">
-                                    <div class="six columns">
-                                        <?php
-                                            echo $this->Form->input('car[]', array('options' => array( 1 => 'Patente'), 'empty' => 'Selecciona', 'class' => 'u-full-width car_doc'));
-                                        ?>
-                                    </div>
-                                    <div class="six columns">
-                                        <?php echo $this->Form->input('car_value[]', array("placeholder" => "(EJ. ABCD12-0)", "class" => "u-full-width car_id")); ?>
-                                    </div>
-                                </div>    
-                            </div>
-                            
-                            <div class="newOne">
-                                <!-- nueva file -->
+                            <div class="row">
+                                <div class="six columns">
+                                    <select class="u-full-width" id="exampleRecipientInput">
+                                        <option value="Opcion 1">Patente</option>
+                                        <option value="Opcion 2">Opción 2</option>
+                                        <option value="Opcion 3">Opción 3</option>
+                                        <option value="Opcion 4">Opción etc...</option>
+                                    </select>
+                                </div>
+                                <div class="six columns">
+                                    <input class="u-full-width" type="text" placeholder="(EJ. ABCD12-0)">
+                                </div>
                             </div>
                             <div class="row text-left">
-                                <a href="#" id="addOne">Agregar otra patente</a>
+                                <a href="#">Agregar otra patente</a>
                             </div>
-
                             <input type="button" name="previous" class="previous action-button transparent" value="Paso anterior" />
-                            <input type="button" name="next" class="next action-button step3" value="Siguiente paso" />
+                            <input type="button" name="next" class="next action-button" value="Siguiente paso" />
                         </fieldset>
                         <fieldset>
-                            <?php echo $this->Form->input('paytype', array("type" => "hidden", "value" => "")); ?>
                             <h3>Paso 4 · Formas de pago</h3>
                             <section class="tablas">
-                                <section class="tabla-1 three columns lift plan-tier" id="addPAC">
+                                <section class="tabla-1 three columns lift plan-tier" onclick="location.href='#';">
                                   <div class="inner-table">
                                     <h4 class="color-1">PAC</h4>
                                     <p>Pago Automático con Cargo a Cuenta Bancaria</p>
                                     <a class="button boton-gris" href="#">Seleccionar</a>
                                   </div>
                                 </section>
-                                <section class="six columns lift plan-tier callout" id="addSER">
+                                <section class="six columns lift plan-tier callout" onclick="location.href='#';">
                                     <h6>RECOMENDADO</h6>
                                     <div class="inner-table">
                                       <h4>SERVIPAG</h4>
@@ -147,7 +142,7 @@
                                       <p>Una vez completado correctamente el registro online</p>
                                     </div>
                                 </section>
-                                <section class="tabla-3 three columns column lift plan-tier" id="addPAT">
+                                <section class="tabla-3 three columns column lift plan-tier" onclick="location.href='#';">
                                   <div class="inner-table">
                                     <h4 class="color-1">PAT</h4>
                                     <p>Pago Automático con Cargo a Tarjeta de Crédito</p>
@@ -160,7 +155,7 @@
                             <div class="row">
                                 <div class="six columns offset-by-three">
                                     <label>
-                                        <?php echo $this->Form->input('agree', array("type" => "checkbox")); ?>
+                                        <input type="checkbox">
                                         <span class="label-body">Acepto el envío de facturas por email</span>
                                     </label>
                                 </div>
