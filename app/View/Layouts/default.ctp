@@ -32,6 +32,7 @@
 
 <body>
 	<?php echo $this->Session->flash(); ?>
+	<div class="error-form" style="position: fixed; left: 0px; right: 0px; margin: 0px auto; padding: 20px; color: rgb(255, 255, 255); max-width: 500px; top: 40%; background: red;z-index: 9999; display:none; text-align: center;"></div>
 	<header>
 			<div class="container">
 					<div class="row">

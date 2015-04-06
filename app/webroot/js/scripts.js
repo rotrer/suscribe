@@ -326,6 +326,23 @@ $(function() {
 	});
 
 	$("#mailform").submit(function(e){
+		
+		var flagMail = true;
+		$(".mails_friends").each( function(indx){
+			var emailFriend = $(this).val();
+			if ( validaEmail( emailFriend.trim() ) == false ) {
+				flagMail = false;
+			}
+		} );
+
+		if ( flagMail === false ) {
+			$('.error-form').empty().html("Debes ingresar un email válido.").fadeIn(300, function(){
+				setTimeout(function(){
+					$('.error-form').fadeOut(500);
+				}, 1500);
+			});
+			return false;
+		};
 		e.preventDefault();
 	});
 });
