@@ -37,7 +37,7 @@
                                 </div>
 
                                 <div class="twelve columns text-center">
-                                    <a class="button boton-amarillo" href="#">Ir a mi cuenta <i class="fa fa-user"></i></a>
+                                    <a class="button boton-amarillo" href="https://www.tagmaipo.cl/Public/Login.aspx" target="_blank">Ir a mi cuenta <i class="fa fa-user"></i></a>
                                 </div>
                             </div>
                         </div>
