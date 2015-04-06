@@ -1,5 +1,5 @@
 # CakePHP 2
-
+**.DS_Store
 /app/tmp/*
 /app/Config/core.php
 /app/Config/database.php

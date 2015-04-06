@@ -35,7 +35,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Comuna', 'Regione', 'Usuario');
+	public $uses = array('Usuario', 'Comuna', 'Regione');
 
 /**
  * Displays a view
@@ -80,6 +80,29 @@ class PagesController extends AppController {
 	}
 
 	public function suscribe( $tipo = null ) {
+		$regione = $this->Regione->find('all');
+        $regioneR = $this->Regione->find('list');
+        if($regione) foreach($regione as $region){
+            $arrDataR[] = array(
+                "id" => $region["Regione"]["id"],
+                "name" => $region["Regione"]["name"]
+            );
+        }
+
+        $comuna = $this->Comuna->find('all');
+        if($comuna) foreach($comuna as $comun){
+            $arrDataC[] = array(
+                "id" => $comun["Comuna"]["id"],
+                "name" => $comun["Comuna"]["name"],
+                "region_id" => $comun["Comuna"]["region_id"]
+            );
+        }
+
+        $this->set('regiones', $regione);
+        $this->set('regionesR', $regioneR);
+        $this->set('comunasArr', $arrDataC);
+        $this->set('type', $tipo);
+
 		$title = 'Suscribe';
 		$this->set(compact('title'));
 	}

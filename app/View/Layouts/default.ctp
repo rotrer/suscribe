@@ -19,8 +19,13 @@
 		<![endif]-->
 		<?php echo $this->Html->script('jquery'); ?>
 		<?php echo $this->Html->script('modal'); ?>
+		<?php echo $this->Html->script('rut'); ?>
+		<?php echo $this->Html->script('validate'); ?>
 		<?php echo $this->Html->script('jquery.easing.min'); ?>
 		<?php echo $this->Html->script('scripts'); ?>
+		<script type="text/javascript">
+			var comunas = JSON.parse('<?php echo json_encode($comunasArr, JSON_HEX_QUOT | JSON_HEX_APOS ); ?>');
+		</script>
 </head>
 
 <body>
