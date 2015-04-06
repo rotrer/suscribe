@@ -19,14 +19,13 @@
 		<![endif]-->
 		<?php echo $this->Html->script('jquery'); ?>
 		<?php echo $this->Html->script('modal'); ?>
+		<?php echo $this->Html->script('rut'); ?>
+		<?php echo $this->Html->script('validate'); ?>
 		<?php echo $this->Html->script('jquery.easing.min'); ?>
 		<?php echo $this->Html->script('scripts'); ?>
-		<?php if (isset($comunasArr) && !empty($comunasArr)) { ?>
 		<script type="text/javascript">
-			var regiones = JSON.parse('<?php echo json_encode($regionesArr, JSON_HEX_QUOT | JSON_HEX_APOS ); ?>');
 			var comunas = JSON.parse('<?php echo json_encode($comunasArr, JSON_HEX_QUOT | JSON_HEX_APOS ); ?>');
 		</script>
-		<?php } ?>
 </head>
 
 <body>
