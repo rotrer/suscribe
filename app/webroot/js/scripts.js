@@ -334,7 +334,6 @@ $(function() {
 				flagMail = false;
 			}
 		} );
-
 		if ( flagMail === false ) {
 			$('.error-form').empty().html("Debes ingresar un email válido.").fadeIn(300, function(){
 				setTimeout(function(){
@@ -343,6 +342,5 @@ $(function() {
 			});
 			return false;
 		};
-		e.preventDefault();
 	});
 });

@@ -23,7 +23,7 @@
                                 ?>
                                     <div class="eight columns">
                                         <div class="base_email">
-                                            <?php echo $this->Form->input('mail', array("type" => "email", "class" => "u-full-width mails_friends", "placeholder" => "Ingresa el mail de un amigo")); ?>
+                                            <?php echo $this->Form->input("null", array("type" => "email", "class" => "u-full-width mails_friends", "placeholder" => "Ingresa el mail de un amigo", 'name' => 'data[Usuario][mail][]')); ?>
                                         </div>
                                         <div class="newOne">
                                             <!-- nueva file -->

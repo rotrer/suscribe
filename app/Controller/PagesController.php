@@ -19,6 +19,7 @@
  */
 
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 /**
  * Static content controller
@@ -140,33 +141,46 @@ class PagesController extends AppController {
 			$this->redirect("/");
 		}
 		$regione = $this->Regione->find('all');
-    $regioneR = $this->Regione->find('list');
-    if($regione) foreach($regione as $region){
-        $arrDataR[] = array(
-            "id" => $region["Regione"]["id"],
-            "name" => $region["Regione"]["name"]
-        );
-    }
+		$regioneR = $this->Regione->find('list');
+		if($regione) foreach($regione as $region){
+				$arrDataR[] = array(
+						"id" => $region["Regione"]["id"],
+						"name" => $region["Regione"]["name"]
+				);
+		}
 
-    $comuna = $this->Comuna->find('all');
-    if($comuna) foreach($comuna as $comun){
-        $arrDataC[] = array(
-            "id" => $comun["Comuna"]["id"],
-            "name" => utf8_encode($comun["Comuna"]["name"]),
-            "region_id" => $comun["Comuna"]["region_id"]
-        );
-    }
+		$comuna = $this->Comuna->find('all');
+		if($comuna) foreach($comuna as $comun){
+				$arrDataC[] = array(
+						"id" => $comun["Comuna"]["id"],
+						"name" => utf8_encode($comun["Comuna"]["name"]),
+						"region_id" => $comun["Comuna"]["region_id"]
+				);
+		}
 
-    $this->set('regiones', $regione);
-    $this->set('regionesR', $regioneR);
-    $this->set('comunasArr', $arrDataC);
-    $this->set('type', $tipo);
+		$this->set('regiones', $regione);
+		$this->set('regionesR', $regioneR);
+		$this->set('comunasArr', $arrDataC);
+		$this->set('type', $tipo);
 
 		$title = 'Suscribe';
 		$this->set(compact('title'));
 	}
 
 	public function gracias() {
+		if ($this->request->is('post')) {
+			if ( isset($this->request->data['Usuario']['mail']) && !empty($this->request->data['Usuario']['mail']) ) {
+				//foreach ($this->request->data['Usuario']['mail'] as $key => $emailStr) {
+						$email = new CakeEmail();
+            $email->config('default')
+                    ->subject("Suscribe tu tag...")
+                    ->to($this->request->data['Usuario']['mail'])
+                    ->template("default")
+                    ->emailFormat('html')
+                    ->send();
+				//}
+			}
+		}
 		$title = 'Gracias';
 		$this->set(compact('title'));
 	}
