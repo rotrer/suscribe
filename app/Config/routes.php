@@ -32,15 +32,20 @@
 	// Router::connect('/suscribe/:tipo', array('controller' => 'pages', 'action' => 'suscribe'), array('pass' => array('tipo'), 'tipo' => '[0-9]+'));
 
 	Router::connect(
-    '/suscribe/:id', // E.g. /blog/3-CakePHP_Rocks
-    array('controller' => 'pages', 'action' => 'suscribe'),
-    array(
-        // order matters since this will simply map ":id" to
-        // $articleId in your action
-        'pass' => array('id'),
-        'id' => '[0-9]+'
-    )
-);
+		'/suscribe/:id', // E.g. /blog/3-CakePHP_Rocks
+		array('controller' => 'pages', 'action' => 'suscribe'),
+		array(
+			// order matters since this will simply map ":id" to
+			// $articleId in your action
+			'pass' => array('id'),
+			'id' => '[0-9]+'
+		)
+	);
+
+	Router::connect(
+		'/suscribe',
+		array('controller' => 'pages', 'action' => 'suscribe')
+	);
 
 	Router::connect('/gracias', array('controller' => 'pages', 'action' => 'gracias'));
 

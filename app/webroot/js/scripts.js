@@ -63,81 +63,101 @@ $(function() {
 		};
 
 		if ( $(this).hasClass('step2') ) {
-			if ( validaTexto($("#UsuarioAddress").val()) == false) {
-				$('.error-form').empty().html("Debe ingresar su dirección.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaTexto($("#UsuarioAddress").val()) == false) {
+			// 	$('.error-form').empty().html("Debe ingresar su dirección.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaEmail($("#UsuarioMail").val()) == false) {
-				$('.error-form').empty().html("Debe ingresar su email.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaEmail($("#UsuarioMail").val()) == false) {
+			// 	$('.error-form').empty().html("Debe ingresar su email.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaEmail($("#UsuarioMailr").val()) == false) {
-				$('.error-form').empty().html("Debe repetir su email.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaEmail($("#UsuarioMailr").val()) == false) {
+			// 	$('.error-form').empty().html("Debe repetir su email.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaSelect($("#UsuarioRegionId").val()) == false) {
-				$('.error-enviar-registro').empty().html("Debes seleccionar su región.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaSelect($("#UsuarioRegionId").val()) == false) {
+			// 	$('.error-form').empty().html("Debes seleccionar su región.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaSelect($("#UsuarioComunaId").val()) == false) {
-				$('.error-enviar-registro').empty().html("Debes seleccionar su comuna.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaSelect($("#UsuarioComunaId").val()) == false) {
+			// 	$('.error-form').empty().html("Debes seleccionar su comuna.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaNumber($("#UsuarioCod").val()) == false) {
-				$('.error-form').empty().html("Debe ingresar su código de teléfono.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaNumber($("#UsuarioCod").val()) == false) {
+			// 	$('.error-form').empty().html("Debe ingresar su código de teléfono.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaPhone($("#UsuarioPhone").val()) == false) {
-				$('.error-form').empty().html("Debe ingresar su teléfono.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaPhone($("#UsuarioPhone").val()) == false) {
+			// 	$('.error-form').empty().html("Debe ingresar su teléfono.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 
-			if ( validaPhone($("#UsuarioMobile").val()) == false) {
-				$('.error-form').empty().html("Debe ingresar su celular.").fadeIn(300, function(){
-					setTimeout(function(){
-						$('.error-form').fadeOut(500);
-					}, 1500);
-				});
-				return false;	
-			}
+			// if ( validaPhone($("#UsuarioMobile").val()) == false) {
+			// 	$('.error-form').empty().html("Debe ingresar su celular.").fadeIn(300, function(){
+			// 		setTimeout(function(){
+			// 			$('.error-form').fadeOut(500);
+			// 		}, 1500);
+			// 	});
+			// 	return false;	
+			// }
 		};
 
 		if ( $(this).hasClass('step3') ) {
-			console.log("step3");
+			$(".car_doc").each( function(indx){
+				if ( validaSelect($(this).val()) == false) {
+					$('.error-form').empty().html("Debes seleccionar tipo de indentificación.").fadeIn(300, function(){
+						setTimeout(function(){
+							$('.error-form').fadeOut(500);
+						}, 1500);
+					});
+					return false;	
+				}
+			} );
+
+			$(".car_id").each( function(indx){
+				if ( validaPatente($(this).val()) == false) {
+					$('.error-form').empty().html("Debes ingresar indentificación del vehículo.").fadeIn(300, function(){
+						setTimeout(function(){
+							$('.error-form').fadeOut(500);
+						}, 1500);
+					});
+					return false;	
+				}
+			} );
 		};
 		if (animating) return false;
 		animating = true;
@@ -229,4 +249,9 @@ $(function() {
         });
         $("#UsuarioComunaId").empty().html(optionsSel);
     });
+
+    $("#addOne").click(function(e){
+		e.preventDefault();
+		$(".newOne").append( $(".base_car").html() );
+	});
 });

@@ -80,6 +80,9 @@ class PagesController extends AppController {
 	}
 
 	public function suscribe( $tipo = null ) {
+		if ( $tipo  == null ) {
+			$this->redirect("/");
+		}
 		$regione = $this->Regione->find('all');
         $regioneR = $this->Regione->find('list');
         if($regione) foreach($regione as $region){

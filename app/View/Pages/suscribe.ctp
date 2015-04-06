@@ -103,16 +103,19 @@
                         </fieldset>
                         <fieldset>
                             <h3>Paso 3 · Datos de tu vehículo</h3>
-                            <div class="row">
-                                <div class="six columns">
-                                    <?php
-                                        echo $this->Form->input('comuna_id', array('options' => array( 1 => 'Patente'), 'empty' => 'Selecciona', 'class' => 'u-full-width'));
-                                    ?>
-                                </div>
-                                <div class="six columns">
-                                    <?php echo $this->Form->input('mobile', array("placeholder" => "(EJ. ABCD12-0)", "class" => "u-full-width")); ?>
-                                </div>
+                            <div class="base_car">
+                                <div class="row">
+                                    <div class="six columns">
+                                        <?php
+                                            echo $this->Form->input('car[]', array('options' => array( 1 => 'Patente'), 'empty' => 'Selecciona', 'class' => 'u-full-width car_doc'));
+                                        ?>
+                                    </div>
+                                    <div class="six columns">
+                                        <?php echo $this->Form->input('car_value[]', array("placeholder" => "(EJ. ABCD12-0)", "class" => "u-full-width car_id")); ?>
+                                    </div>
+                                </div>    
                             </div>
+                            
                             <div class="newOne">
                                 <!-- nueva file -->
                             </div>

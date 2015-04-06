@@ -24,7 +24,9 @@
 		<?php echo $this->Html->script('jquery.easing.min'); ?>
 		<?php echo $this->Html->script('scripts'); ?>
 		<script type="text/javascript">
+			<?php if ( isset($comunasArr) && !empty($comunasArr) ) { ?>
 			var comunas = JSON.parse('<?php echo json_encode($comunasArr, JSON_HEX_QUOT | JSON_HEX_APOS ); ?>');
+			<?php } ?>
 		</script>
 </head>
 

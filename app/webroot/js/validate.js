@@ -123,7 +123,7 @@ function validaNumber(val){
     return patron.test(val);
 }
 function validaEmail(val){
-	patron =/[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/; // Solo emai
+	patron =/[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/; // Solo emai
     return patron.test(val);
 }
 function activaError(state, text, el){
