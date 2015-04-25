@@ -4,7 +4,7 @@
 <head>
 		<?php echo $this->Html->charset(); ?>
 		<title>
-			Suscribe tu TAG - <?php echo $title; ?>
+			<?php echo $title; ?> - Suscribe tu TAG
 		</title>
 		<meta name="description" content="">
 		<meta name="author" content="">

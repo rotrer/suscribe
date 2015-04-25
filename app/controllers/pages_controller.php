@@ -170,7 +170,7 @@ class PagesController extends AppController {
 		$this->set('comunasArr', $arrDataC);
 		$this->set('type', $tipo);
 
-		$title = 'Suscribe';
+		$title = 'Registro';
 		$this->set(compact('title'));
 	}
 
