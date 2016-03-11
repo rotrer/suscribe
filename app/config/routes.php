@@ -44,6 +44,11 @@
 	);
 
 	Router::connect('/gracias', array('controller' => 'pages', 'action' => 'gracias'));
+
+	Router::connect('/soap', array('controller' => 'pages', 'action' => 'soap'));
+	Router::connect('/ruttoll', array('controller' => 'pages', 'action' => 'ruttoll'));
+	Router::connect('/platetoll', array('controller' => 'pages', 'action' => 'platetoll'));
+	Router::connect('/invitar', array('controller' => 'pages', 'action' => 'invitefriends'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

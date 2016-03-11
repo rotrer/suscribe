@@ -1,0 +1,52 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetVehiclesByAccountIdResponse xmlns="http://tempuri.org/">
+         <GetVehiclesByAccountIdResult>
+            <Vehicle>
+               <Id>9693</Id>
+               <CreatedBy>MAIPO\Admin-jvega</CreatedBy>
+               <CreatedDate>2015-04-13T13:00:01</CreatedDate>
+               <LastUpdatedApp>TollCRM</LastUpdatedApp>
+               <LastUpdatedDate>2015-04-13T13:00:01</LastUpdatedDate>
+               <LastUpdatedBy>MAIPO\Admin-jvega</LastUpdatedBy>
+               <IsDirty>false</IsDirty>
+               <AccountId>283</AccountId>
+               <EndDate xsi:nil="true"/>
+               <LicensePlateCountry>CL</LicensePlateCountry>
+               <LicensePlateNumber>AB1234</LicensePlateNumber>
+               <LicensePlateState>LI</LicensePlateState>
+               <LicensePlateType>CAR</LicensePlateType>
+               <PlateStatusDate>2015-04-13T13:00:01</PlateStatusDate>
+               <PlateStatusId>ACTIVE</PlateStatusId>
+               <StartDate>2015-04-13T12:59:55</StartDate>
+               <VehicleClassId>CARS_AND_TRUCKS</VehicleClassId>
+               <VehicleMake>141</VehicleMake>
+               <VehicleYear>2015</VehicleYear>
+               <ExtensionsXML>&lt;extensions xmlns="http://tempuri.org/XMLSchema.xs">&lt;NationalSafetyCodeCarrierNumber>&lt;/NationalSafetyCodeCarrierNumber>&lt;/extensions></ExtensionsXML>
+               <Extensions>
+                  <ExtensionAttribute>
+                     <Name>NationalSafetyCodeCarrierNumber</Name>
+                     <Value/>
+                  </ExtensionAttribute>
+               </Extensions>
+               <VehiclePaymentMeanContract>
+                  <Id>26473</Id>
+                  <CreatedBy>MAIPO\Admin-jvega</CreatedBy>
+                  <CreatedDate>2015-04-13T13:00:01</CreatedDate>
+                  <LastUpdatedApp>TollCRM</LastUpdatedApp>
+                  <LastUpdatedDate>2015-04-13T13:00:01</LastUpdatedDate>
+                  <LastUpdatedBy>MAIPO\Admin-jvega</LastUpdatedBy>
+                  <IsDirty>false</IsDirty>
+                  <AccountId>283</AccountId>
+                  <ContractTypeId>VehiclePaymentMeanApproval</ContractTypeId>
+                  <ContractStatusId>ApprovedByBank</ContractStatusId>
+                  <ContractStatusDate>2015-04-13T13:00:01</ContractStatusDate>
+                  <ReferenceId>9693</ReferenceId>
+               </VehiclePaymentMeanContract>
+               <InteropMonitorStatus>NOT_MONITORING</InteropMonitorStatus>
+               <InteropMonitorStatusDate>2015-04-13T12:59:03</InteropMonitorStatusDate>
+            </Vehicle>
+         </GetVehiclesByAccountIdResult>
+      </GetVehiclesByAccountIdResponse>
+   </soap:Body>
+</soap:Envelope>

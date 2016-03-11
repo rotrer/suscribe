@@ -97,12 +97,12 @@ function validaFormulario(formID){
 	return responseValidate;
 }
 function validaTexto(val){
-	patron =/[A-Z a-z]{3}/; // Solo acepta letras y espacios mínimo 3
-    return patron.test(val);
+	patron =/[a-z A-Z ñÑ]{2}/; // Solo acepta letras y espacios mínimo 3
+    return patron.test(val.trim());
 }
 function validaAlphaNumeric(val){
 	patron =/[A-Za-z0-9]{5}/; // Solo acepta letras y numero mínimo 5
-    return patron.test(val);
+    return patron.test(val.trim());
 }
 function validaNotEmpty(val){
 	patron = /([^\s])/;
@@ -115,7 +115,7 @@ function validaNonZero(val){
 	if( parseInt(val) > 0 ){ return true; }else{ return false;}
 }
 function validaPhone(val){
-	patron =/[0-9 ]{7}\d/; // Solo acepta números mínimo 6
+	patron =/[0-9 ]{6}\d/; // Solo acepta números mínimo 6
     return patron.test(val);
 }
 function validaNumber(val){

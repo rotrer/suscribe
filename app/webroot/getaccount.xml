@@ -1,0 +1,112 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetAccountResponse xmlns="http://tempuri.org/">
+         <GetAccountResult>
+            <Id>283</Id>
+            <CreatedBy>MAIPO\Admin-jvega</CreatedBy>
+            <CreatedDate>2015-04-13T12:59:06</CreatedDate>
+            <LastUpdatedApp>TollCRM</LastUpdatedApp>
+            <LastUpdatedDate>2015-04-13T14:18:57</LastUpdatedDate>
+            <LastUpdatedBy>MAIPO\Admin-jvega</LastUpdatedBy>
+            <IsDirty>false</IsDirty>
+            <AccountSummary>
+               <AccountId>283</AccountId>
+               <AccountNumber>100002834</AccountNumber>
+               <AccountStatus>Abierta</AccountStatus>
+               <AccountStatusId>0</AccountStatusId>
+               <AccountTypeDescription>Profesional</AccountTypeDescription>
+               <AccountTypeId>2</AccountTypeId>
+               <CurrentBalance>0.0000</CurrentBalance>
+               <FirstName>Test Ny Rl</FirstName>
+               <LastName>Test</LastName>
+               <FullName>Test Ny Rl Test Test</FullName>
+               <LongName>Sr. Test Ny Rl Test Test</LongName>
+               <PlanCode>P0200</PlanCode>
+               <RegistrationTypeDescription>Inscripción con Tag</RegistrationTypeDescription>
+               <RegistrationTypeId>1</RegistrationTypeId>
+               <Address>Test Ny 123 RANCAGUA, Rancagua, Libertador, Chile</Address>
+               <City>Rancagua</City>
+               <EMail>Testt@test.cn</EMail>
+               <LBTAmount>0.0000</LBTAmount>
+               <Phone>56223232232</Phone>
+               <RebillMethodId>7</RebillMethodId>
+               <StateProvince>Libertador</StateProvince>
+               <ActualTransponderDeposit>0.0000</ActualTransponderDeposit>
+               <FinancialStatusDescription>Activo</FinancialStatusDescription>
+               <FinancialStatusId>1</FinancialStatusId>
+               <FineBalance>0</FineBalance>
+               <LastPaymentDetails/>
+               <MaxTransponders>9999</MaxTransponders>
+               <OpenCitation>0</OpenCitation>
+               <PlanType>Post-Pago</PlanType>
+               <PromotionsTotalDiscountMessage>The customer saved 0 during the last 0 day(s).</PromotionsTotalDiscountMessage>
+               <RebillAmount>0.0000</RebillAmount>
+               <TollBalance>0</TollBalance>
+               <TransponderCount>0</TransponderCount>
+               <VehicleCount>1</VehicleCount>
+               <ViolationBalance>0.0000</ViolationBalance>
+               <CountyCode>138</CountyCode>
+               <Country>Chile</Country>
+               <CreditCard>
+                  <CardType>NA</CardType>
+                  <ExpiryDate>0001-01-01T00:00:00</ExpiryDate>
+               </CreditCard>
+               <ACH>
+                  <FullName></FullName>
+                  <TransitNumber>/</TransitNumber>
+               </ACH>
+               <NumberOfTagsOrdered>0</NumberOfTagsOrdered>
+               <StatementFrequency>5 de cada mes</StatementFrequency>
+               <AccountWebStatus>0</AccountWebStatus>
+               <StatementClosingBalance>0.0000</StatementClosingBalance>
+               <StatementMethodId>0</StatementMethodId>
+            </AccountSummary>
+            <AccountNumber>100002834</AccountNumber>
+            <AccountStatusDate>2015-04-13T12:59:00</AccountStatusDate>
+            <AccountStatusId>OPEN</AccountStatusId>
+            <AccountTypeId>BUSINESS</AccountTypeId>
+            <ActualTagDeposit>0.0000</ActualTagDeposit>
+            <AverageToll>0.0000</AverageToll>
+            <BalanceDate xsi:nil="true"/>
+            <CloseDate xsi:nil="true"/>
+            <CloseReason>0</CloseReason>
+            <CurrentBalance>0.0000</CurrentBalance>
+            <DeletionStateCode>0</DeletionStateCode>
+            <DelinquencyCount>0</DelinquencyCount>
+            <DelinquencyStatus>0</DelinquencyStatus>
+            <ExpectedTagDeposit>0.0000</ExpectedTagDeposit>
+            <FinancialStatus>1</FinancialStatus>
+            <FinancialStatusDate xsi:nil="true"/>
+            <IsDelinquent>false</IsDelinquent>
+            <IsFOFF>false</IsFOFF>
+            <IsVIP>false</IsVIP>
+            <LBTAmount>0.0000</LBTAmount>
+            <NBTAmount>0.0000</NBTAmount>
+            <OpenDate>2015-04-13T12:59:00</OpenDate>
+            <OrganizationId>1</OrganizationId>
+            <PlanCode>P0200</PlanCode>
+            <PrimaryContactId>283</PrimaryContactId>
+            <RAStatus>0</RAStatus>
+            <RebillAmount>0.0000</RebillAmount>
+            <RebillDate xsi:nil="true"/>
+            <RebillMethodId>SERVIPAG</RebillMethodId>
+            <RebillStatusId>NA</RebillStatusId>
+            <RegistrationTypeId>TRANSPONDER</RegistrationTypeId>
+            <Tier>0</Tier>
+            <UTTBalance>0.0000</UTTBalance>
+            <UTTBalanceDate xsi:nil="true"/>
+            <ViolationBalance>0.0000</ViolationBalance>
+            <IsAutoPay>true</IsAutoPay>
+            <BusinessTypeId>SMALL_BUSINESS</BusinessTypeId>
+            <ExtensionsXML>&lt;extensions xmlns="http://tempuri.org/XMLSchema.xs">&lt;BCeIDBusiness_UserID>&lt;/BCeIDBusiness_UserID>&lt;/extensions></ExtensionsXML>
+            <Extensions>
+               <ExtensionAttribute>
+                  <Name>BCeIDBusiness_UserID</Name>
+                  <Value/>
+               </ExtensionAttribute>
+            </Extensions>
+            <OrganizationTypeId>PrivatelyOwned</OrganizationTypeId>
+         </GetAccountResult>
+      </GetAccountResponse>
+   </soap:Body>
+</soap:Envelope>

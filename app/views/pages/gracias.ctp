@@ -4,16 +4,17 @@
                 <div class="twelve columns">
                     <h2 class="section-heading text-center">¡Bienvenido!</h2>
                     <div class="eight columns offset-by-two">
-                        <p class="text-center">A partir de hoy, puedes utilizar tu vehículo en nuestro Sistema TAG Interurbano implementado en ANgostura y todas las plazas de peajes de la Concesión, facturaremos tu peaje mendualmente y podrás pagar tu cuenta de peaje en Servipag o a través de Pago Automático, según haya sido tu elección.</p>
+                        <p class="text-center">A partir de hoy, puedes utilizar tu vehículo en nuestro Sistema TAG Interurbano implementado en Angostura y todas las plazas de peajes de la Concesión, facturaremos tu peaje mensualmente y podrás pagar tu cuenta de peaje en Servipag o a través de Pago Automático, según haya sido tu elección.</p>
 
-                        <p class="text-center"><strong>¿Tus amigos aún no suscriben su TAG?</strong></p>
+                        <p class="text-center hide_friend"><strong>¿Tus amigos aún no suscriben su TAG?</strong></p>
 
-                        <p class="text-center">Recomienda a un amigo para que al igual que tu gane tiempo en sus viajes.</p>
+                        <p class="text-center hide_friend">Recomienda a un amigo para que al igual que tu gane tiempo en sus viajes.</p>
                         <div class="row">
                             <div class="twelve columns">
+                                <h3 class="showFriend" style="display:none;">Gracias por recomendar a tus amigos.</h3>
                                 <?php 
                                 echo $this->Form->create(null, array(
-                                                            'url' => array('controller' => 'pages', 'action' => 'gracias'),
+                                                            'url' => '/',
                                                             'inputDefaults' => array(
                                                                                 'label' => false,
                                                                                 'div' => false
@@ -33,7 +34,7 @@
                                 <?php echo $this->Form->end(); ?>
 
                                 <div class="twelve columns">
-                                    <a class="link-form" href="#" id="addEmailFriend"><i class="fa fa-plus-circle"></i> INGRESAR MÁS CORREOS</a>
+                                    <a class="link-form hide_friend" href="#" id="addEmailFriend"><i class="fa fa-plus-circle"></i> INGRESAR MÁS CORREOS</a>
                                 </div>
 
                                 <div class="twelve columns text-center">

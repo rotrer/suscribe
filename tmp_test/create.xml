@@ -1,0 +1,213 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<tem:CreateAccount xmlns="http://tempuri.org/">
+<tem:account>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:AccountStatusDate>2016-03-10T14:18:22</tem:AccountStatusDate>
+<tem:AccountStatusId>OPEN</tem:AccountStatusId>
+<tem:AccountTypeId>PERSONAL</tem:AccountTypeId>
+<tem:ActualTagDeposit>0</tem:ActualTagDeposit>
+<tem:AverageToll>0</tem:AverageToll>
+<tem:BalanceDate xsi:nil="true"/>
+<tem:CloseDate xsi:nil="true"/>
+<tem:CloseReason>0</tem:CloseReason>
+<tem:CurrentBalance>0</tem:CurrentBalance>
+<tem:DeletionStateCode>0</tem:DeletionStateCode>
+<tem:DelinquencyCount>0</tem:DelinquencyCount>
+<tem:DelinquencyStatus>0</tem:DelinquencyStatus>
+<tem:ExpectedTagDeposit>0</tem:ExpectedTagDeposit>
+<tem:FinancialStatus>0</tem:FinancialStatus>
+<tem:FinancialStatusDate xsi:nil="true"/>
+<tem:IsDelinquent>false</tem:IsDelinquent>
+<tem:IsFOFF>false</tem:IsFOFF>
+<tem:IsVIP>false</tem:IsVIP>
+<tem:LBTAmount>0</tem:LBTAmount>
+<tem:NBTAmount>0</tem:NBTAmount>
+<tem:OpenDate>2016-03-10T14:18:22</tem:OpenDate>
+<tem:OrganizationId>0</tem:OrganizationId>
+<tem:PlanCode>P0200</tem:PlanCode>
+<tem:PrimaryContactId>0</tem:PrimaryContactId>
+<tem:RAStatus>0</tem:RAStatus>
+<tem:RebillAmount>0</tem:RebillAmount>
+<tem:RebillDate xsi:nil="true"/>
+<tem:RebillMethodId>SERVIPAG</tem:RebillMethodId>
+<tem:RebillStatusId>NA</tem:RebillStatusId>
+<tem:RegistrationTypeId>TRANSPONDER</tem:RegistrationTypeId>
+<tem:Tier>0</tem:Tier>
+<tem:UTTBalance>0</tem:UTTBalance>
+<tem:UTTBalanceDate xsi:nil="true"/>
+<tem:ViolationBalance>0</tem:ViolationBalance>
+<tem:IsAutoPay>true</tem:IsAutoPay>
+<tem:BusinessTypeId>NA</tem:BusinessTypeId>
+<tem:Extensions/>
+<tem:OrganizationTypeId>PrivatelyOwned</tem:OrganizationTypeId>
+</tem:account>
+<tem:contact>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:AccountId>0</tem:AccountId>
+<tem:BirthDate xsi:nil="true"/>
+<tem:ContactMethod>2</tem:ContactMethod>
+<tem:CustomerType>1</tem:CustomerType>
+<tem:DayTimePhone>+56 9 00999999</tem:DayTimePhone>
+<tem:DeletionStateCode>0</tem:DeletionStateCode>
+<tem:Department>?</tem:Department>
+<tem:Email>contacto@lcasesoria.cl</tem:Email>
+<tem:FirstName>JUAN CARLOS</tem:FirstName>
+<tem:ICBCStatus>0</tem:ICBCStatus>
+<tem:IsICBCDataValid>false</tem:IsICBCDataValid>
+<tem:IsPrimary>true</tem:IsPrimary>
+<tem:LastName>ORELLANA RIBBA</tem:LastName>
+<tem:MarketingAnswer>3</tem:MarketingAnswer>
+<tem:MiddleName/>
+<tem:MobilePhone>+56 9 00999999</tem:MobilePhone>
+<tem:Password>111qqq</tem:Password>
+<tem:PrimaryAddressId>0</tem:PrimaryAddressId>
+<tem:SecurityAnswer>6906</tem:SecurityAnswer>
+<tem:SecurityQuestion>13</tem:SecurityQuestion>
+<tem:SignupMethod>3</tem:SignupMethod>
+<tem:SourceId>WEB</tem:SourceId>
+<tem:StatementFrequency>5</tem:StatementFrequency>
+<tem:StatementGroup>0</tem:StatementGroup>
+<tem:StatementMethod>2</tem:StatementMethod>
+<tem:NID>10916906-4</tem:NID>
+<tem:PickUpLocId>0</tem:PickUpLocId>
+<tem:ServipagPriority>1</tem:ServipagPriority>
+<tem:LegalRepSequence>0</tem:LegalRepSequence>
+<tem:IsActive>true</tem:IsActive>
+</tem:contact>
+<tem:address>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:ContactId>0</tem:ContactId>
+<tem:AddressFirstLine>FELIPE II 4295</tem:AddressFirstLine>
+<tem:AddressNumber>0</tem:AddressNumber>
+<tem:AddressSecondLine/>
+<tem:AddressThirdLine>LAS CONDES</tem:AddressThirdLine>
+<tem:AddressTypeId>PRIMARY</tem:AddressTypeId>
+<tem:City>Santiago</tem:City>
+<tem:CountryCode>CL</tem:CountryCode>
+<tem:CountyCode>117</tem:CountyCode>
+<tem:DeletionStateCode>0</tem:DeletionStateCode>
+<tem:IsPrimary>true</tem:IsPrimary>
+<tem:Locale>0</tem:Locale>
+<tem:ShippingMethodId>0</tem:ShippingMethodId>
+<tem:StateProvinceCode>RM</tem:StateProvinceCode>
+</tem:address>
+<tem:rebillMethod>0</tem:rebillMethod>
+<tem:expectedPayment>
+<tem:Transponders/>
+<tem:PaymentType>SERVIPAG</tem:PaymentType>
+<tem:PrepaidToll>0</tem:PrepaidToll>
+<tem:TransponderDeposit>0</tem:TransponderDeposit>
+<tem:RebillAmount>0</tem:RebillAmount>
+<tem:ActualTransponderDeposit>0</tem:ActualTransponderDeposit>
+<tem:LowBalanceAmount>0</tem:LowBalanceAmount>
+<tem:AccountSetupFee>0</tem:AccountSetupFee>
+<tem:UnusedPromotionBalance>0</tem:UnusedPromotionBalance>
+<tem:ExpectedAmount>0</tem:ExpectedAmount>
+</tem:expectedPayment>
+<tem:vehicles>
+<tem:Vehicle>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedApp>?</tem:LastUpdatedApp>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:AccountId>0</tem:AccountId>
+<tem:EndDate xsi:nil="true"/>
+<tem:LicensePlateCountry>CL</tem:LicensePlateCountry>
+<tem:LicensePlateNumber>FFSY52</tem:LicensePlateNumber>
+<tem:LicensePlateState>RM</tem:LicensePlateState>
+<tem:LicensePlateType>CAR</tem:LicensePlateType>
+<tem:PlateStatusDate>2016-03-10T14:18:22</tem:PlateStatusDate>
+<tem:PlateStatusId>ACTIVE</tem:PlateStatusId>
+<tem:StartDate>2016-03-10T14:18:22</tem:StartDate>
+<tem:VehicleClassId>CARS_AND_TRUCKS</tem:VehicleClassId>
+<tem:VehicleColor>PLATEADO</tem:VehicleColor>
+<tem:VehicleMake>207</tem:VehicleMake>
+<tem:VehicleModel>I30 GLS</tem:VehicleModel>
+<tem:VehicleYear>2013</tem:VehicleYear>
+<tem:AccountTag>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:AccountId>0</tem:AccountId>
+<tem:TagId>0</tem:TagId>
+<tem:TagStatusId>NOT_SHIPPED</tem:TagStatusId>
+<tem:TagStatusDate xsi:nil="true"/>
+<tem:StartDate xsi:nil="true"/>
+<tem:EndDate xsi:nil="true"/>
+<tem:SalesOrderId>0</tem:SalesOrderId>
+<tem:SalesOrderDetailId>0</tem:SalesOrderDetailId>
+<tem:SeqNo>0</tem:SeqNo>
+<tem:IsBackOrder>false</tem:IsBackOrder>
+<tem:IsCancelOrder>false</tem:IsCancelOrder>
+<tem:TagPayChoiceId>0</tem:TagPayChoiceId>
+<tem:DeletionStateCode>0</tem:DeletionStateCode>
+<tem:ExternalId>51410023678</tem:ExternalId>
+<tem:IssuerName>Vespucio Norte</tem:IssuerName>
+</tem:AccountTag>
+<tem:Extensions/>
+<tem:InteropMonitorStatus>NOT_MONITORING</tem:InteropMonitorStatus>
+<tem:InteropMonitorStatusDate>2016-03-10T14:18:22</tem:InteropMonitorStatusDate>
+</tem:Vehicle>
+<tem:Vehicle>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedApp>?</tem:LastUpdatedApp>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:AccountId>0</tem:AccountId>
+<tem:EndDate xsi:nil="true"/>
+<tem:LicensePlateCountry>CL</tem:LicensePlateCountry>
+<tem:LicensePlateNumber>HLCH30</tem:LicensePlateNumber>
+<tem:LicensePlateState>RM</tem:LicensePlateState>
+<tem:LicensePlateType>CAR</tem:LicensePlateType>
+<tem:PlateStatusDate>2016-03-10T14:18:22</tem:PlateStatusDate>
+<tem:PlateStatusId>ACTIVE</tem:PlateStatusId>
+<tem:StartDate>2016-03-10T14:18:22</tem:StartDate>
+<tem:VehicleClassId>CARS_AND_TRUCKS</tem:VehicleClassId>
+<tem:VehicleMake>394</tem:VehicleMake>
+<tem:VehicleModel>CAPTUR</tem:VehicleModel>
+<tem:VehicleYear>2016</tem:VehicleYear>
+<tem:AccountTag>
+<tem:Id>0</tem:Id>
+<tem:CreatedDate>2016-03-10T14:18:22</tem:CreatedDate>
+<tem:LastUpdatedDate>2016-03-10T14:18:22</tem:LastUpdatedDate>
+<tem:IsDirty>false</tem:IsDirty>
+<tem:AccountId>0</tem:AccountId>
+<tem:TagId>0</tem:TagId>
+<tem:TagStatusId>NOT_SHIPPED</tem:TagStatusId>
+<tem:TagStatusDate xsi:nil="true"/>
+<tem:StartDate xsi:nil="true"/>
+<tem:EndDate xsi:nil="true"/>
+<tem:SalesOrderId>0</tem:SalesOrderId>
+<tem:SalesOrderDetailId>0</tem:SalesOrderDetailId>
+<tem:SeqNo>0</tem:SeqNo>
+<tem:IsBackOrder>false</tem:IsBackOrder>
+<tem:IsCancelOrder>false</tem:IsCancelOrder>
+<tem:TagPayChoiceId>0</tem:TagPayChoiceId>
+<tem:DeletionStateCode>0</tem:DeletionStateCode>
+<tem:ExternalId>15350121818</tem:ExternalId>
+<tem:IssuerName>Costanera Norte</tem:IssuerName>
+</tem:AccountTag>
+<tem:Extensions/>
+<tem:InteropMonitorStatus>NOT_MONITORING</tem:InteropMonitorStatus>
+<tem:InteropMonitorStatusDate>2016-03-10T14:18:22</tem:InteropMonitorStatusDate>
+</tem:Vehicle>
+</tem:vehicles>
+<tem:checkDate>2016-03-10T14:18:22</tem:checkDate>
+<tem:ICNId>10781</tem:ICNId>
+<tem:CSRId>1420</tem:CSRId>
+</tem:CreateAccount>
+</soapenv:Body>
+</soapenv:Envelope>
